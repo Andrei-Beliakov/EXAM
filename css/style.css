@@ -21,6 +21,7 @@ body {
 }
 
 .card__order {
+  position: relative;
   color: #73798c;
   font-size: 16px;
   line-height: 22px;
@@ -40,6 +41,14 @@ body {
 
 span {
   font-weight: 400;
+}
+
+.probel {
+  display: none;
+}
+
+.card__adress {
+  display: inline;
 }
 
 .card__address::before {
@@ -91,10 +100,59 @@ button:hover {
 }
 
 @media (max-width: 633px) {
-  .card__address {
-    max-width: 300px;
-  }
   span {
     display: block;
+  }
+
+  .card__address::before {
+    display: none;
+  }
+
+  .card__address {
+    background: #f3f3f7;
+    padding: 18px 20px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 525px) {
+  .time {
+    display: none;
+  }
+
+  .accept__text {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .card__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  .card__accept {
+    margin: 4px 0 12px;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card__order {
+    font-family: "Arial", sans-serif;
+    color: #72788b;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+
+  .card__buttons {
+    gap: 10px 0;
+  }
+
+  .probel {
+    display: inline;
   }
 }
